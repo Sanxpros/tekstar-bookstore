@@ -7,8 +7,8 @@ services:
     environment:
       DYNAMODB_TABLE: development-resources
       AWS_DEFAULT_REGION: us-east-2
-      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
-      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_ACCESS_KEY_ID: AKIA5L3P2SVEFJT4MA4H
+      AWS_SECRET_ACCESS_KEY: 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
       AWS_XRAY_SDK_ENABLED: "false"
 
   inventory-api:
@@ -21,8 +21,8 @@ services:
       DYNAMODB_TABLE: development-inventory
       RESOURCE_API_ENDPOINT: http://resources-api:5000
       AWS_DEFAULT_REGION: us-east-2
-      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
-      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_ACCESS_KEY_ID: AKIA5L3P2SVEFJT4MA4H
+      AWS_SECRET_ACCESS_KEY: 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
 
   clients-api:
     build: ./clients-api/src
@@ -30,8 +30,8 @@ services:
       - "5003:5003"
     environment:
       AWS_DEFAULT_REGION: us-east-2
-      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
-      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_ACCESS_KEY_ID: AKIA5L3P2SVEFJT4MA4H
+      AWS_SECRET_ACCESS_KEY: 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
 
   renting-api:
     build: ./renting-api/api
@@ -39,8 +39,8 @@ services:
       - "5004:3000"
     environment:
       AWS_DEFAULT_REGION: us-east-2
-      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
-      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_ACCESS_KEY_ID: AKIA5L3P2SVEFJT4MA4H
+      AWS_SECRET_ACCESS_KEY: 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
       DYNAMODB_TABLE: development-renting
       INVENTORY_API_ENDPOINT: http://inventory-api:5001
       CLIENTS_API_ENDPOINT: http://clients-api:5003
